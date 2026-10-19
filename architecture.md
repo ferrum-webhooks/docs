@@ -165,7 +165,7 @@ The crash-by-crash analysis is in [engineering/02](engineering/02-delivery-pipel
 | `…/alembic/versions/` | migrations (the gateway owns the schema) |
 | `ferrum-webhook-worker/worker/` | `main`, `consumer`, `delivery`, `relay`, `scheduler`, `signing`, `health`, `config` |
 | `infra/local/` | one-command local stack |
-| `infra/bench/` | benchmark scripts behind the numbers in [engineering](engineering/) |
+| `infra/bench/` | benchmark scripts behind the numbers in [engineering](engineering/README.md) |
 | `infra/k8s/`, `infra/charts/ferrum/` | Kubernetes manifests and Helm chart |
 | `infra/tests/` | smoke test, echo receiver, sink, k6 load script |
 

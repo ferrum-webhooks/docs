@@ -169,4 +169,4 @@ caffeinate -dims infra/bench/run_all.sh /tmp/ferrum-results        # the whole s
 infra/bench/ablation.sh && python3 infra/bench/aggregate.py /tmp/ferrum-bench/abl 20      # sections 1 to 3
 infra/bench/scaling.sh && python3 infra/bench/aggregate.py /tmp/ferrum-bench/scale 20     # sections 5, 6
 ```
-Raw outputs of the runs quoted here are in [`docs/data/`](../data).
+Raw outputs of the runs quoted here are in [`docs/data/`](https://github.com/ferrum-webhooks/docs/tree/main/data).

@@ -29,4 +29,4 @@ Ferrum delivers webhooks reliably: you send it an event, it makes sure each regi
 | [testing](testing.md) | the tests and how to run them |
 | [decisions](decisions.md) | the main design choices and why |
 | [engineering notes](engineering/README.md) | eight write-ups: what went wrong, what was measured |
-| [data/](data) | the raw numbers behind the write-ups |
+| [data/](https://github.com/ferrum-webhooks/docs/tree/main/data) | the raw numbers behind the write-ups |

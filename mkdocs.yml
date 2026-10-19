@@ -1,0 +1,54 @@
+site_name: Ferrum documentation
+site_description: Reliable webhook delivery - how it works, how to run it, and what was measured.
+site_url: https://ferrum-webhooks.github.io/docs/
+repo_url: https://github.com/ferrum-webhooks/docs
+docs_dir: .build_docs      # filled by scripts/build.sh
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: { icon: material/weather-sunny, name: Light mode }
+  features: [navigation.sections, navigation.top, content.code.copy]
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc: { permalink: true }
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: README.md
+  - Quickstart: quickstart.md
+  - Understand it:
+      - Architecture: architecture.md
+      - Data model: data-model.md
+      - Design decisions: decisions.md
+  - Use it:
+      - API: api.md
+      - Configuration: configuration.md
+      - Security: security.md
+      - Observability: observability.md
+  - Run it:
+      - Deployment: deployment.md
+      - Operations: operations.md
+      - Testing: testing.md
+  - Engineering notes:
+      - Overview: engineering/README.md
+      - 1. The outbox: engineering/01-outbox.md
+      - 2. The delivery pipeline: engineering/02-delivery-pipeline.md
+      - 3. Retries: engineering/03-retries.md
+      - 4. Password hashing memory: engineering/04-argon2-memory.md
+      - 5. A connection-pool deadlock: engineering/05-connection-pool-deadlock.md
+      - 6. Ingest performance: engineering/06-ingest-performance.md
+      - 7. Webhook security: engineering/07-webhook-security.md
+      - 8. Tracing: engineering/08-tracing.md

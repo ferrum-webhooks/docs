@@ -72,7 +72,7 @@ A target rejected at send time is dead-lettered immediately (retrying a forbidde
 ### Verified
 - `tests/test_ssrf.py`: **16 blocked URL patterns** and the allowed public literal, hostname-resolves-to-private (mocked DNS), unresolvable host, and the API rejecting create/update with `422`.
 - `tests/test_worker.py::test_blocked_target_is_dead_lettered_without_a_request`: a webhook changed to the metadata address after registration is dead-lettered and **no HTTP request is made**.
-- Reproduce interactively: [quickstart §3.7](../quickstart.md#37-the-ssrf-guard).
+- Reproduce interactively: [quickstart §3.7](../quickstart.md#37-the-private-address-check).
 
 ### What this does not solve
 - **The rebinding window.** The guard resolves the hostname, then the HTTP client resolves it again. An attacker controlling DNS can answer differently the second time. Closing it fully

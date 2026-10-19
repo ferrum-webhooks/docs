@@ -125,4 +125,4 @@ curl -s $GW/metrics | grep '^gateway_'
 | Events stay `pending` | the worker or Redis isn't running: `infra/local/stack.sh status` |
 | `bad interpreter` when running `.venv/bin/pytest` | use `.venv/bin/python -m pytest` |
 
-For Kubernetes, see [deployment](deployment.md). For load tests, see the [infra README](../infra/README.md).
+For Kubernetes, see [deployment](deployment.md). For load tests, see the [infra README](https://github.com/ferrum-webhooks/infra#speed-tests).

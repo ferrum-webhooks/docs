@@ -70,7 +70,7 @@ An operational detail learned the hard way: at 100% sampling under load, an in-m
 2. Jaeger → service `ferrum-gateway` → tag `ferrum.event_id=evt_…` (or paste the trace id).
 3. Read the tree as above.
 
-Walkthrough: [quickstart §3.9](../quickstart.md#39-traces). Configuration: `OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_TRACES_SAMPLER_RATIO` ([configuration](../configuration.md#observability)).
+Configuration: `OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_TRACES_SAMPLER_RATIO` ([configuration](../configuration.md#observability)).
 
 ## Tested
 - `tests/test_worker.py::test_one_trace_from_ingest_through_retry`: a traceparent set at ingest travels outbox → stream → consumer; the original attempt and the scheduled retry are both children of it, and `webhook.post` records 500 then 200.

@@ -15,7 +15,7 @@ Eight short case studies from building Ferrum: a problem, what was tried, what w
 
 ## Where the numbers come from
 
-Every table comes from a script in [`infra/bench`](../../infra/bench) (or a service's `scripts/` folder); the command is at the end of each note, and the raw output is in [`../data`](../data).
+Every table comes from a script in [`infra/bench`](https://github.com/ferrum-webhooks/infra/tree/main/bench) (or a service's `scripts/` folder); the command is at the end of each note, and the raw output is in [`../data`](https://github.com/ferrum-webhooks/docs/tree/main/data).
 Everything ran on one Apple M5 laptop with the load generator, database and receiver on the same machine, so absolute numbers are conservative. The comparisons between versions are the meaningful part.
 
 ## Lessons about measuring
