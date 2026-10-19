@@ -1,0 +1,5 @@
+# ferrum-webhook-worker/scripts/sign_bench.py  (median of 5 repetitions; Apple M5, Python 3.9)
+body=     290 B  sign=     1.8 us  verify=     3.0 us  json.dumps=     1.7 us
+body=    2090 B  sign=     2.8 us  verify=     3.5 us  json.dumps=     3.8 us
+body=   50090 B  sign=    21.3 us  verify=    22.8 us  json.dumps=    64.6 us
+body=  250090 B  sign=    98.6 us  verify=    97.3 us  json.dumps=   331.0 us

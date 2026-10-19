@@ -1,0 +1,9 @@
+drain wait: 22s
+events                      21379
+deliveries success             21379
+duplicate (event,webhook)   0
+outbox unpublished          0
+deliveries with >1 attempt  0
+sink: {"total": 21379, "unique": 21379}
+end-to-end latency, event created -> first successful attempt (ms):
+  p50 28905.5  p95 37122.9  p99 38038.5  max 38312.5

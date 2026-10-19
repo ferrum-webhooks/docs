@@ -1,0 +1,11 @@
+webhooks   before   after
+       1        6       5
+       5       14       5
+      20       44       5
+
+after, statement list (1 webhook):
+  INSERT INTO events (public_id, user_id, payload, status, event_type, i
+  SELECT webhooks.id AS webhooks_id, webhooks.user_id AS webhooks_user_i
+  INSERT INTO deliveries (event_id, webhook_id, status, retries, latency
+  INSERT INTO outbox (delivery_id, request_id, traceparent, created_at,
+  COMMIT

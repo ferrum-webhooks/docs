@@ -1,0 +1,12 @@
+# Quickstart scenarios executed against the local stack (infra/local/stack.sh), final code
+retries (receiver FAIL_FIRST=2, echo_receiver verifies each signature):
+  [14:30:01] #1 POST /hook -> 500  id=evt_a6da... (seen 1x) signature=VALID
+  [14:30:07] #2 POST /hook -> 500  id=evt_a6da... (seen 2x) signature=VALID      (+6 s: 5 s backoff + scheduler tick)
+  [14:30:18] #3 POST /hook -> 200  id=evt_a6da... (seen 3x) signature=VALID      (+11 s: 10 s backoff + scheduler tick)
+  delivery: status=success retries=3 attempts=[failed 500, failed 500, success 200]
+idempotency: 202 200 200 ; same key + different body: 422
+rate limit (RATE_LIMIT_CAPACITY=5, REFILL=1/s): 200 200 200 200 200 429 429 429 ; Retry-After: 1
+ssrf (guard on): 169.254.169.254, 127.0.0.1:6379, 10.0.0.5 -> "target address is not publicly routable"; localhost -> "internal hostnames are not allowed"
+kill -9 mid-delivery (LEASE=3s RECLAIM_IDLE=4s INTERVAL=2s; receiver hangs only the first request):
+  success 2.6 s after the kill; receiver saw 2 POSTs (1 abandoned in flight, 1 after recovery); single observation
+smoke.py: 13/13 PASS

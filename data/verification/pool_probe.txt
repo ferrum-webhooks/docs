@@ -1,0 +1,5 @@
+# ferrum-webhook-gateway/scripts/pool_probe.py  (120 concurrent GETs, 6 threads, 4-connection pool, 3 s pool timeout, real Postgres 18)
+current (release in handler)   /events  requests=120 threads=6 pool=4  ok=120  503=0    elapsed=0.2s   pool_checked_out_after=0
+legacy (release at teardown)   /events  requests=120 threads=6 pool=4  ok=6    503=114  elapsed=57.2s  pool_checked_out_after=0
+legacy (release at teardown)   /readyz  requests=120 threads=6 pool=4  ok=120  503=0    elapsed=0.1s   pool_checked_out_after=0
+# /readyz uses the database but has no response_model, i.e. no response-serialisation step in the thread pool.

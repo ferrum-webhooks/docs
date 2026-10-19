@@ -1,0 +1,5 @@
+backlog: 13136 events accepted with no worker running (outbox unpublished: 13136)
+sink=  0ms  workers=1 x concurrency= 8  drained 13136 deliveries in   37.2s  =>      353 deliveries/s
+backlog: 13573 events accepted with no worker running (outbox unpublished: 13573)
+sink=  0ms  workers=1 x concurrency=32  drained 13573 deliveries in   42.1s  =>      323 deliveries/s
+backlog: 12817 events accepted with no worker running (outbox unpublished: 12817)
